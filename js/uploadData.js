@@ -36,7 +36,7 @@ function pasaBajo() {
 function pasaAlto() {
     for (let i = 0; i < 3; i++)
         for (let j = 0; j < 3; j++)
-            document.getElementById('matrix' + i + '-' + j).value = (i == 1 && j == 1) ? 1 : 8
+            document.getElementById('matrix' + i + '-' + j).value = (i == 1 && j == 1) ? 8 : -1
     document.getElementById('smooth').value = 9
 }
 
@@ -64,21 +64,22 @@ function preWittComb() {
 function sobel() {
     for (let i = 0; i < 3; i++)
         for (let j = 0; j < 3; j++)
-            document.getElementById('matrix' + i + '-' + j).value = (j == 1) ? i - 1 * 2 : i - 1
+            document.getElementById('matrix' + i + '-' + j).value = (j == 1) ? (i - 1) * 2 : i - 1
     document.getElementById('smooth').value = 1
 }
 
 function sobelMod() {
     for (let i = 0; i < 3; i++)
         for (let j = 0; j < 3; j++)
-            document.getElementById('matrix' + i + '-' + j).value = (i == 1) ? j - 1 * 2 : j - 1
+            document.getElementById('matrix' + i + '-' + j).value = (i == 1) ? (j - 1) * 2 : j - 1
     document.getElementById('smooth').value = 1
 }
 
 function sobelComb() {
     for (let i = 0; i < 3; i++)
         for (let j = 0; j < 3; j++)
-            document.getElementById('matrix' + i + '-' + j).value = ((j == 1) ? i - 1 * 2 : i - 1) + ((i == 1) ? j -
-                1 * 2 : j - 1)
+            document.getElementById('matrix' + i + '-' + j).value =  ((j == 1) ? (i - 1) * 2 : i - 1) + ((i == 1) ? (j -
+                1) * 2 : j - 1)
+    document.getElementById('matrix1-1').value = 1
     document.getElementById('smooth').value = 1
 }
