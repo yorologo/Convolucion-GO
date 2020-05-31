@@ -53,7 +53,7 @@ func CheckServerError(err error, w http.ResponseWriter) {
 }
 
 // Redirige a la pagina principal
-// O inicia el procesamiento de la imagen si esta es mandada en un POST y redirige hacia donde se mostrada el resultado
+// O inicia el procesamiento de la imagen si esta es mandada en un POST y redirige hacia donde se mostrara el resultado
 func firstServer(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "GET" {
 		// Obtiene la imagen y la decodifica
