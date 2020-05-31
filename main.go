@@ -14,14 +14,14 @@ import (
 	"text/template"
 )
 
-// Parametros para la convolucioon de la imagen
+// Parametros para la convolucion de la imagen
 var smooth int = 1
 var matrixConv = [3][3]int{
 	{0, 0, 0},
 	{0, 1, 0},
 	{0, 0, 0}}
 
-// Levanta el servidor, y enruta las direcciones de los recurss de la aplicacion
+// Levanta el servidor, y enruta las direcciones de los recuros de la aplicacion
 func main() {
 	fmt.Println("Servidor levantado en la direccion http://localhost:8080")
 
